@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { fetchData } from '../api';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
 interface Product {
   id: number;
   name: string;
+  // Adicione outras propriedades conforme necessário
 }
 
 const Home: React.FC = () => {
@@ -17,9 +18,10 @@ const Home: React.FC = () => {
     const getProducts = async () => {
       try {
         const data = await fetchData();
-        setProducts(data.products);
+        setProducts(data.products || []);
       } catch (error) {
         console.error('Erro ao buscar produtos:', error);
+        setProducts([]);
       }
     };
     getProducts();
@@ -51,13 +53,18 @@ const Home: React.FC = () => {
   return (
     <div>
       <input type="text" placeholder="Buscar..." onClick={handleSearch} />
-      <Carousel responsive={responsive}>
-        {products.map(product => (
-          <div key={product.id}>{product.name}</div>
-        ))}
-      </Carousel>
+      {Array.isArray(products) && products.length > 0 ? (
+        <Carousel responsive={responsive}>
+          {products.map(product => (
+            <div key={product.id}>{product.name}</div>
+          ))}
+        </Carousel>
+      ) : (
+        <p>Nenhum produto encontrado</p>
+      )}
     </div>
   );
 };
 
 export default Home;
+

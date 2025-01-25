@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { auth, googleProvider } from "../firebaseConfig";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import "../styles components/Login.css"
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState<string>("");
@@ -25,23 +26,13 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div>
+    <section>
       <h2>Login</h2>
-      <input
-        type="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="Email"
-      />
-      <input
-        type="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        placeholder="Senha"
-      />
+      <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email"/>
+      <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Senha"/>
       <button onClick={handleLogin}>Login</button>
       <button onClick={handleGoogleLogin}>Login com Google</button>
-    </div>
+    </section>
   );
 };
 
