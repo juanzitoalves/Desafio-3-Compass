@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header-home {
+    max-width: 100%;
+    background-color: antiquewhite;
+    margin: 30px 0;
+}
+
+.header-home > p {
+    display: flex;
+    justify-content: center;
+}
+
+.title-home {
+    margin-bottom: 20px;
+}
+
+.title-home > h4 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.title-home > h1 {
+    margin-left: 20px;
+}
+
+.search-home {
+    margin-left: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding-right: 200px;
+}
+
+.products-home {
+    margin-top: 30px;
+    background-color: #F6F6F6;
+    border-radius: 30px;
+}
+

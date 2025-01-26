@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { auth, googleProvider } from "../firebaseConfig";
 import { signInWithPopup } from "firebase/auth";
-import "../styles components/Login.css"
+import "../styles components/SignUp.css"
 import { useNavigate } from "react-router-dom";
 
-
-const Login: React.FC = () => {
+const SignUp: React.FC = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
@@ -19,16 +18,15 @@ const Login: React.FC = () => {
 
   };
 
-  const navigate = useNavigate();
+    const navigate = useNavigate();
 
-  
-  const handleHome = async () => {
-    navigate("/home")
+    const handleHome = async () => {
+        navigate("/home")
+      };
+
+    const handleSignUp = async () => {
+    navigate("/")
   };
-
-  const navToSignIn = async () => {
-    navigate("/signup")
-  }
 
   return (
     <section>
@@ -48,17 +46,16 @@ const Login: React.FC = () => {
           <input className="login input-" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email"/>
           <input className="login input" type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Senha"/>
           <a href="# ">Forgot Password</a>
-          <button className="login button" onClick={handleHome}>Sign in</button>
-          <button className="login google-button" onClick={handleGoogleLogin}>Sign in with Google</button>
+          <button className="login button" onClick={handleHome}>Sign up</button>
+          <button className="login google-button" onClick={handleGoogleLogin}>Sign up with Google</button>
         </article>
       </main>
 
       <footer>
-        <p>If you have an account?<a onClick={navToSignIn} href="# ">Sign In here</a></p>
+        <p>Didn’t have any account? <a onClick={handleSignUp} href="# ">Sign In here</a></p>
       </footer>
     </section>
   );
 };
 
-export default Login;
-
+export default SignUp;
