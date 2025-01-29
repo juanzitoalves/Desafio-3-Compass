@@ -15,7 +15,7 @@
       "dom",
       "es6"
     ],
-    "jsx": "react",
+    "jsx": "preserve",
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "module": "esnext",
