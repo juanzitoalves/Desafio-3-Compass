@@ -36,14 +36,14 @@ const Home: React.FC = () => {
             id: 1,
             name: "Headphone X",
             price: 299.99,
-            image: "../images/image 5.jpg",
+            image: "https://empreender.nyc3.cdn.digitaloceanspaces.com/dropi/ef7e65e6c55b14894c569dd2948b130f.jpeg",
             category: "Headphones",
           },
           {
             id: 2,
             name: "Headset Y",
             price: 399.99,
-            image: "../images/image 5.jpg",
+            image: "https://empreender.nyc3.cdn.digitaloceanspaces.com/dropi/ef7e65e6c55b14894c569dd2948b130f.jpeg",
             category: "Headset",
           },
         ]);
@@ -63,7 +63,11 @@ const Home: React.FC = () => {
   };
 
   const handleProductClick = (id: number) => {
-    navigate(`/product-details/${id}`);
+    navigate(`/product/${id}`);
+  };
+
+  const handleSeeAll = () => {
+    navigate('/explore-products');
   };
 
   const responsive = {
@@ -112,7 +116,7 @@ const Home: React.FC = () => {
             className={`tab-button ${activeTab === "Headset" ? "active" : ""}`}
             onClick={() => handleTabClick("Headset")}
           >
-            Headset
+            Cable
           </button>
         </article>
         <article className="first-carrossel">
@@ -129,7 +133,7 @@ const Home: React.FC = () => {
                     onClick={() => handleProductClick(product.id)}
                   >
                     <img
-                      src={product.image || "../images/image 5.jpg"}
+                      src={product.image || "https://empreender.nyc3.cdn.digitaloceanspaces.com/dropi/ef7e65e6c55b14894c569dd2948b130f.jpeg"}
                       alt={product.name}
                       className="product-image"
                     />
@@ -142,7 +146,7 @@ const Home: React.FC = () => {
         </article>
         <article className="featured-products">
           <h4>Featured Products</h4>
-          <p>See All</p>
+          <p onClick={handleSeeAll}>See All</p>
         </article>
         <article className="first-carrossel">
           <Carousel responsive={responsive} arrows={false}>
@@ -166,7 +170,7 @@ const Home: React.FC = () => {
               .map((product) => (
                 <div key={product.id} className="product-item">
                   <img
-                    src={product.image || "https://via.placeholder.com/200"}
+                    src={product.image || "https://empreender.nyc3.cdn.digitaloceanspaces.com/dropi/ef7e65e6c55b14894c569dd2948b130f.jpeg"}
                     alt={product.name}
                     className="product-image"
                   />

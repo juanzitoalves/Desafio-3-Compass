@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.title-search {
+    display: flex;
+    align-items: center;
+    margin: 10px 0 30px;
+}
+
+.title-search > p {
+    margin-left: 10px;
+    font-size: 30px;
+}
+
+.title-search > h1 {
+    margin-left: 130px;
+    font-size: 24px;
+}
+
+.search-field {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px auto;
+    width: 90%;
+}
+  
+.search-field input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+  
+.search-field button {
+    padding: 8px 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor:pointer;
+    font-size: 16px;
+}
+  
+.search-field button:hover {
+    background-color: #0056b3;
+}
+
+.popular-products {
+    margin: 250px 0 0 20px;
+}
+
+.popular-products h2 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.popular-products #star {
+    color: rgb(255, 191, 0);
+    font-size: 25px;
+}
+
+.products {
+    margin-top: 20px;
+}
+
+.products img{
+    float: left;
+}

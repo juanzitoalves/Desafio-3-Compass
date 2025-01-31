@@ -8,7 +8,7 @@
 }
 
 #hour-home {
-    margin-top: 20px;
+    margin-top: 10px;
     margin-left: 20px;
 }
 
@@ -78,7 +78,6 @@
 
 .img-card-1 {
     padding: 60px 0px;
-    background-image: url('../images/image\ 5.jpg');
     background-repeat: no-repeat;
 }
 
@@ -86,4 +85,8 @@
     display: flex;
     justify-content: space-between;
     margin: 20px;
+}
+
+.product-image {
+    height: 100px;
 }

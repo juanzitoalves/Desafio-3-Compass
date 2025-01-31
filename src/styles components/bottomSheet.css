@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Adicione isso ao seu arquivo CSS */
+.bottom-sheet {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    z-index: 1000;
+    transition: bottom 0.3s ease-in-out;
+}
+  
+.bottom-sheet.open {
+    bottom: 0;
+}
+  
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+  
+button.selected {
+    background-color: #0ACF83;
+    color: white;
+}
+  
+.apply-button {
+    background-color: #0ACF83; /* Verde */
+    color: white;
+}
+  
+.close-button {
+    background-color: #dc3545; /* Vermelho */
+    color: white;
+}
+  
