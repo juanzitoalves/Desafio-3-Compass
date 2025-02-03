@@ -35,7 +35,7 @@ const Cart: React.FC = () => {
         </div>
         <button onClick={handleClearCart}><AiOutlineDelete /></button>
       </header>
-      <h1>Carrinho de Compras</h1>
+      <h1>Carrinho de Compra</h1>
       {cartItems.map((item) => (
         <div key={item.id} className="cart-item">
           <img src={item.image} alt={item.name} className="cart-item-image" />

@@ -42,7 +42,6 @@ const SignUp: React.FC = () => {
   return (
     <section>
       <header>
-        <p id="hour">9:41</p>
         <img src="../images/wifi.png" alt="" />
         <img src="../images/Wi-Fi.png" alt="" />
         <img src="../images/Battery.png" alt="" />

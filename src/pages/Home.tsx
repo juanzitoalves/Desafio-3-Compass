@@ -91,7 +91,6 @@ const Home: React.FC = () => {
 
   return (
     <div>
-      <p id="hour-home">9:41</p>
       <div className="header-home"></div>
       <div className="title-home">
         <h4>Hi,</h4>

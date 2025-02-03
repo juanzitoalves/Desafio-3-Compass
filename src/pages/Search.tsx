@@ -50,9 +50,6 @@ const Search: React.FC = () => {
 
   return (
     <div>
-      {/* Cabeçalho */}
-      <p id='hour-home'>9:41</p>
-
       {/* Título da Página */}
       <div className='title-search'>
         <p onClick={handleBack}>&lt;</p>

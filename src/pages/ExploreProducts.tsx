@@ -52,7 +52,6 @@ const ExploreProducts = () => {
   return (
     <div className="container">
       {/* Cabeçalho */}
-      <p id="hour-home">9:41</p>
       <p onClick={handleBack} className="back-home">
         &lt;
       </p>
