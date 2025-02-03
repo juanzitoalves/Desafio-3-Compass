@@ -45,6 +45,10 @@ const ExploreProducts = () => {
     navigate("/home");
   };
 
+  const handleProductClick = (id: number) => {
+    navigate(`/product/${id}`);
+  };
+
   return (
     <div className="container">
       {/* Cabeçalho */}
@@ -60,7 +64,7 @@ const ExploreProducts = () => {
           className="filter-button"
           onClick={() => setIsFilterVisible(true)}
         >
-          <img src="../images/sliders.png"/> Filter
+          Filter
         </button>
       </div>
 
@@ -75,9 +79,9 @@ const ExploreProducts = () => {
       {/* Lista de Produtos */}
       <div className="bg-explore">
         {filteredProducts.map((product, index) => (
-          <div key={`${product.id}-${index}`} className="product-card">
-            <img
-              src={product.image} // Use a URL da imagem do produto
+          <div onClick={() => handleProductClick(product.id)} key={`${product.id}-${index}`} className="product-card">
+            <img 
+              src={product.image || 'https://empreender.nyc3.cdn.digitaloceanspaces.com/dropi/ef7e65e6c55b14894c569dd2948b130f.jpeg'} // Use a URL da imagem do produto
               alt={product.name}
               className="product-image"
             />

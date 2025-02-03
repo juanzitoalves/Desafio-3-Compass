@@ -1,0 +1,80 @@
+
+
+.top-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.shop-car {
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+.products-info {
+    margin-left: 20px;
+}
+
+.products-info > p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0ACF83;
+}
+
+.products-info > h3 {
+    font-size: 28px;
+}
+
+.tab-button {
+    border: none;
+    background: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+  
+.active-tab {
+    border-bottom: 2px solid #0ACF83; /* Adiciona o sublinhado */
+    font-weight: bold;
+}
+ 
+.product-image {
+    margin-left: 20px;
+}
+
+.reviews {
+    margin-left: 20px;
+}
+
+.review {
+    margin-top: 20px;
+}
+
+.user-infos {
+    display: flex;
+}
+
+.carousel-container {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #F6F6F6;
+}
+
+.product-item {
+    padding: 10px;
+    background-color: #fff;
+}
+
+.atcb-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.add-to-cart-button {
+    background-color: #0ACF83;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 40px;
+
+}

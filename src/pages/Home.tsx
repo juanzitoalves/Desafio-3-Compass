@@ -168,7 +168,9 @@ const Home: React.FC = () => {
                   : [...unique, item];
               }, [] as Product[])
               .map((product) => (
-                <div key={product.id} className="product-item">
+                <div key={product.id}
+                className="product-item"
+                onClick={() => handleProductClick(product.id)}>
                   <img
                     src={product.image || "https://empreender.nyc3.cdn.digitaloceanspaces.com/dropi/ef7e65e6c55b14894c569dd2948b130f.jpeg"}
                     alt={product.name}

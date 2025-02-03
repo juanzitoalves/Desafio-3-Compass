@@ -5,9 +5,10 @@ import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Search from './pages/Search';
 import ExploreProducts from './pages/ExploreProducts';
-import ProductDetail from './pages/ProductDetails'; // Importe a página de detalhes do produto
+import ProductDetail from './pages/ProductDetails';
+import Cart from './pages/Cart';
 import 'react-spring-bottom-sheet/dist/style.css';
-import { CartProvider } from './components/CartContext'; // Importe o CartProvider
+import { CartProvider } from './components/CartContext';
 
 const App: React.FC = () => {
   return (
@@ -19,7 +20,8 @@ const App: React.FC = () => {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/search" element={<Search />} />
           <Route path="/explore-products" element={<ExploreProducts />} />
-          <Route path="/product/:id" element={<ProductDetail />} /> {/* Adicione a rota para a página de detalhes do produto */}
+          <Route path="/product/:id" element={<ProductDetail />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </Router>
     </CartProvider>

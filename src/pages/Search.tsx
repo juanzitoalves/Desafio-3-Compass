@@ -65,30 +65,12 @@ const Search: React.FC = () => {
         <button onClick={handleSearch}>Buscar</button>
       </div>
 
-      {/* Produto em Destaque */}
-      <article>
-        {products.length > 0 && ( // Verifica se há produtos no array
-          <div key={products[0].id}>
-            <img src="../images/image 5.jpg" alt={products[0].name} />
-            <h3>{products[0].name}</h3>
-            <p>USD {products[0].price}</p>
-            <div>
-              <span>★</span>
-              <span>
-                {products[0].rating} {products[0].reviews} Reviews
-              </span>
-            </div>
-          </div>
-        )}
-      </article>
-
-
       {/* Produtos Populares */}
       <article className='popular-products'>
         <h2>Popular Products</h2>
         {filteredProducts.map((product) => (
           <div className='products' key={product.id}>
-            <img src="../images/image 5.jpg" alt={product.name} />
+            <img width='70px' src="https://empreender.nyc3.cdn.digitaloceanspaces.com/dropi/ef7e65e6c55b14894c569dd2948b130f.jpeg" alt={product.name} />
             <h3>{product.name}</h3>
             <p>USD {product.price}</p>
             <div>
